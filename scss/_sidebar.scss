@@ -1,0 +1,21 @@
+.active-nav-item {
+background: #292242;
+border: 1px solid #2A2A2A;
+box-sizing: border-box;
+/* Inset */
+
+box-shadow: inset 7px 5px 10px 4px #000000;
+border-radius: 40px;
+}
+
+.nav-item {
+    background: linear-gradient(90deg, #1C1C1C 0%, #121212 101.18%);
+/* Nav > Not Selected */
+
+border: 1px solid #000000;
+box-sizing: border-box;
+/* Nav > Not Selected */
+
+box-shadow: 16px 4px 23px -3px #000000;
+border-radius: 40px;
+}
