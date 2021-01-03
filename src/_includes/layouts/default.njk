@@ -1,31 +1,99 @@
-<!doctype html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <base href="https://pages.oakwave.net/ehw-case-study/ehw.html">
-    <title>Enviro-Master Case Study - Case Studies</title>
-    <meta property="og:title" content="Essential Health & Wellness Case Study - Case Studies" />
-    <meta name="twitter:title" content="Essential Health & Wellness - Case Studies" />
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+    <head>
+        <title>
+            {%- if title -%}
+                {{ title }} – {{ site.title }}
+            {%- else -%}
+                {{ site.title }} – {{ site.description }}
+            {%- endif -%}
+        </title>
+        <!-- Google Tag Manager -->
+      <!--   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-MVK4PJJ');</script>-->
+        <!-- End Google Tag Manager -->
+        <meta name="description" content="{% block description %}{{ site.description }}{% endblock %}">
+        <meta name="robots" content="index,follow">
+        <base href="{{page.url}}">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
-    <!-- Compressed Styles -->
-    <link href="css/slides.css" rel="stylesheet" type="text/css">
+
+        <meta name="generator" content="Eleventy">
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+ <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+            {% if site.icon %}
+            <link type="image/png" rel="shortcut icon" href="{{ site.icon }}">
+            <link rel="icon" type="image/png" sizes="16x16" href="images/favicons/favicon-16x16.png">
+            <link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png">
+            <link rel="icon" type="image/png" sizes="48x48" href="images/favicons/favicon-48x48.png">
+            <link rel="manifest" href="images/favicons/manifest.json">
+            <link rel="apple-touch-icon" sizes="57x57" href="images/favicons/apple-touch-icon-57x57.png">
+            <link rel="apple-touch-icon" sizes="60x60" href="images/favicons/apple-touch-icon-60x60.png">
+            <link rel="apple-touch-icon" sizes="72x72" href="images/favicons/apple-touch-icon-72x72.png">
+            <link rel="apple-touch-icon" sizes="76x76" href="images/favicons/apple-touch-icon-76x76.png">
+            <link rel="apple-touch-icon" sizes="114x114" href="images/favicons/apple-touch-icon-114x114.png">
+            <link rel="apple-touch-icon" sizes="120x120" href="images/favicons/apple-touch-icon-120x120.png">
+            <link rel="apple-touch-icon" sizes="144x144" href="images/favicons/apple-touch-icon-144x144.png">
+            <link rel="apple-touch-icon" sizes="152x152" href="images/favicons/apple-touch-icon-152x152.png">
+            <link rel="apple-touch-icon" sizes="167x167" href="images/favicons/apple-touch-icon-167x167.png">
+            <link rel="apple-touch-icon" sizes="180x180" href="images/favicons/apple-touch-icon-180x180.png">
+            <link rel="apple-touch-icon" sizes="1024x1024" href="images/favicons/apple-touch-icon-1024x1024.png">
+            <meta name="apple-mobile-web-app-capable" content="yes">
+            <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+            <meta name="apple-mobile-web-app-title" content="open-pro-html">
+        {% endif %}
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="theme-color" content="#fff">
+        <meta name="application-name" content="open-pro-html">
+        {%- block seo -%}
+            <!--Twitter Card-->
+            <meta name="twitter:site" content="{{ site.twitter }}">
+            <meta name="twitter:creator" content="{{ site.twitter }}">
+            <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:url" content="{{ site.url + page.url }}">
+            <meta name="twitter:title" content="{{ title + " – " + site.title if title else title }}">
+            <meta name="twitter:description" content="{{ site.description }}">
+            <meta name="twitter:image" content="{{ site.cover_image }}">
+        <!--Schema-->
+            <link rel="author" href="{{ site.url }}">
+            <link rel="publisher" href="{{ site.url }}">
+            <meta itemprop="name" content="{{ title + " – " + site.title if title else title }}">
+            <meta itemprop="description" content="{{ site.description }}">
+            <meta itemprop="image" content="{{ site.cover_image }}">
+        <!-- Facebook OpenGraph -->
+            <meta property="og:url" content="{{site.url + page.url}}">
+            <meta property="og:type" content="website">
+            <meta property="og:title" content="{{ title + " – " + site.title if title else title }}">
+            <meta property="og:image" content="{{ site.cover_image }}">
+            <meta property="og:description" content="{{ site.description }}">
+            <meta property="og:site_name" content="{{ site.title }}">
+            <meta property="og:locale" content="{{ site.lang }}">
+            <meta property="article:author" content="{{ site.url }}">
+
+
+        {%- endblock -%}
+
+    <link href="/assets/css/slides.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="https://use.typekit.net/zeb2lwt.css">
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-RDNMXDKXP9"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+          <link href="/assets/css/custom_d3RJ60BX.css?p=JpN1a0ML" rel="stylesheet" type="text/css"> 
 
-  gtag('config', 'G-RDNMXDKXP9');
-</script>
-    
-    <link href="css/custom_d3RJ60BX.css?p=JpN1a0ML" rel="stylesheet" type="text/css"> 
-</head>
+        {% block givinghead %}
+        {% endblock givinghead %}
+        {{ site.codeinjection_head | safe if site.codeinjection_head }}
+        {{ codeinjection_head | safe if codeinjection_head }}
+    </head>
 <body class="slides vertigo smooth smoothScroll animated">
+
+        <!-- Google Tag Manager (noscript) -->
+            <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MVK4PJJ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <!-- End Google Tag Manager (noscript) -->
+
+
 <svg id="customSvgLibrary" xmlns="http://www.w3.org/2000/svg" style="display:none" id="customSvgLibrary">
 
   <symbol id="logo" viewBox="0 0 106 31"><title>OAKwave EHW Case Study</title><path d="M17.413 14.04c-.56-5.84-5.6-7-8.52-7-4.6 0-8.6 2.92-8.6 7.52 0 3 2.4 4.88 5.28 5.8 4.24 1.64 5.88 1.84 5.88 3.36 0 1.08-1.2 1.72-2.32 1.72-.28 0-2.24 0-2.52-2.04h-6.6c.6 5.84 5.68 7.36 9.04 7.36 4.92 0 9.04-2.88 9.04-7.76 0-4.8-4-5.92-7.76-6.96-1.76-.52-3.4-1.2-3.4-2.2 0-.6.48-1.48 1.88-1.48 1.96 0 2.04 1.2 2.08 1.68h6.52zm2.222 15.96h6.64v-29.6h-6.64v29.6zm9.662-24.56h6.64v-5.04h-6.64v5.04zm0 24.56h6.64v-22.2h-6.64v22.2zm32.782-29.6h-6.64v9.28c-.72-.72-2.6-2.64-6.52-2.64-5.64 0-11 4.28-11 11.8 0 6.68 4.4 11.88 11.12 11.88 4.48 0 6.08-2.2 6.72-3.12v2.4h6.32v-29.6zm-17.52 18.4c0-2.56 1.8-5.56 5.64-5.56 1.56 0 2.96.56 3.96 1.56 1 .96 1.64 2.32 1.64 3.92.08 1.64-.52 3.08-1.56 4.12s-2.52 1.68-4.12 1.68c-3.12 0-5.56-2.28-5.56-5.68v-.04zm42.502 2.4c.52-4.08-.32-7.64-3.12-10.64-2.08-2.2-5-3.52-8.4-3.52-6.76 0-11.64 5.72-11.64 11.92 0 6.6 5.4 11.76 11.76 11.76 2.28 0 4.48-.68 6.32-2 1.88-1.28 3.44-3.2 4.52-5.68h-6.8c-.8 1.16-1.92 2.08-4.04 2.08-2.6 0-4.84-1.56-5.12-3.92h16.52zm-16.44-5.04c.16-1.04 1.52-3.52 4.96-3.52s4.8 2.48 4.96 3.52h-9.92zm34.502-2.12c-.56-5.84-5.6-7-8.52-7-4.6 0-8.6 2.92-8.6 7.52 0 3 2.4 4.88 5.28 5.8 4.24 1.64 5.88 1.84 5.88 3.36 0 1.08-1.2 1.72-2.32 1.72-.28 0-2.24 0-2.52-2.04h-6.6c.6 5.84 5.68 7.36 9.04 7.36 4.92 0 9.04-2.88 9.04-7.76 0-4.8-4-5.92-7.76-6.96-1.76-.52-3.4-1.2-3.4-2.2 0-.6.48-1.48 1.88-1.48 1.96 0 2.04 1.2 2.08 1.68h6.52z"/></symbol>
@@ -101,7 +169,7 @@
 </nav><!-- Panel Top #06 -->
 <nav class="panel top">
   <div class="sections desktop">
-    <div class="left"><a href="https://www.oakwave.com" title="OAKwave"><img src="assets/uploads/logo-lined-white-and-purpleat3x.png?p=JpN1a0ML" /></a></div>
+    <div class="left"><a href="https://www.oakwave.com" title="OAKwave"><img src="/assets/uploads/logo-lined-white-and-purpleat3x.png?p=JpN1a0ML" /></a></div>
     <div class="center">
       <ul class="menu">
         <li><a href="https://www.oakwave.com">Main Site</a></li>
@@ -109,10 +177,10 @@
         <li><a href="https://www.oakwave.com/schedule">Schedule a Call</a></li>
       </ul>
     </div>
-    <div class="right"><span class="button actionButton sidebarTrigger" data-sidebar-id="1"><img src="assets/uploads/logo-lined-white-and-purpleat3x.png?p=JpN1a0ML"></span></div>
+    <div class="right"><span class="button actionButton sidebarTrigger" data-sidebar-id="1"><img src="/assets/uploads/logo-lined-white-and-purpleat3x.png?p=JpN1a0ML"></span></div>
   </div>
   <div class="hidden sections compact">
-    <div class="left"><a href="#" title="Slides Framework"><img class="logo" src="assets/uploads/logo-lined-white-and-purpleat3x.png?p=JpN1a0ML"></a></div>
+    <div class="left"><a href="#" title="Slides Framework"><img class="logo" src="/assets/uploads/logo-lined-white-and-purpleat3x.png?p=JpN1a0ML"></a></div>
     <div class="right"><span class="button actionButton sidebarTrigger" data-sidebar-id="1"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu"></use></svg></span></div>
   </div>
 </nav>
@@ -121,20 +189,19 @@
 <nav class="sidebar" data-sidebar-id="1">
   <div class="close"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close"></use></svg></div>
   <div class="content">
-    <div class="sidebar-logo"><a href="#" class=""><img src="assets/uploads/logo-symbol-white-purple.png?p=JpN1a0ML"class="logo"></a></div>
+    <div class="sidebar-logo"><a href="#" class=""><img src="/assets/uploads/logo-symbol-white-purple.png?p=JpN1a0ML"class="logo"></a></div>
     <ul class="mainMenu margin-top-3">
              <li><a href="https://www.oakwave.com">Main Site</a></li>
         <li><a href="https://www.oakwave.com/blog">Blog</a></li>
        <!-- <li><a href="https://www.oakwave.com/testimonials">More Case Studies</a></li>-->
-        <li><a href="https://www.oakwave.com/schedule">Schedule a Call</a></li>    </ul>
-  <!--  <ul class="subMenu small opacity-8">
-      <li><a href="#">Submit Product</a></li>
-      <li><a href="#">FAQ</a></li>
-      <li><a href="#">License</a></li>
-      <li><a href="#">Terms & Conditions</a></li>
-      <li><a href="#">Privacy Policy</a></li>
-      <li><a href="#">Contact Us</a></li>
-    </ul>-->
+        <li><a href="https://www.oakwave.com/schedule">Schedule a Call</a></li>  
+        <li> Case Studies
+<ul class="subMenu small opacity-8">
+      <li><a href="Commercial Cleaning Franchise">Commercial Cleaning Franchise</a></li>
+      <li><a href="IT Service &amp; Consulting Firm">IT Service &amp; Consulting Firm</a></li>
+      <li><a href="Multi-Practicioner Medical Provider &amp; Franchising Model">Medical Plan Provider </a></li>
+
+    </ul>
     <ul class="social opacity-8">
       <li><a href="https://www.facebookc.com/oakwaveco"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#facebook"></use></svg></a></li>
       <li><a href="https://www.twitter.com/oakwaveco"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#twitter"></use></svg></a></li>
@@ -144,163 +211,60 @@
 </nav>
 
 
-<!-- Slide 3 (#36) -->
+
+
 <section class="slide fade-6 kenBurns" data-name="slide-36-d655dbe3">
   <div class="content">
     <div class="container">
       <div class="wrap">
-
-        <div class="fix-9-12 toCenter">
-          <img class="round margin-bottom-1 ae-1 fromCenter" src="assets/uploads/logo-symbol-white-purple.png?p=JpN1a0ML" alt="Avatar" width="70"/>
-          <p class="ae-2 large margin-bottom-1"><span class="opacity-8 oswald">Case Study</span></p>
-          <h1 class="smaller oswald ae-3 margin-bottom-2">How We Tamed Essential Health & Wellness's Scattered Direction Growth Model</h1>
-          <p class="ae-4 large"><span class="opacity-8 raleway">To create anything–whether a short story or a magazine profile or a film or a sitcom–is to believe, if only momentarily, you are capable of&nbsp;magic.</span> <a href="#slide-20-0439f293" class="button btnbox">Read About It</a></p>
-        </div>
-        <div class="fix-10-12">
-          <img class="dragon" src="assets/uploads/dragon.png?p=JpN1a0ML" data-action="zoom" alt="dragon"/>
-        </div>
-
+        {% block slideone %}{% endblock %}
       </div>
     </div>
   </div>
-  <div class="background" style="background-image:url(assets/uploads/background4.jpg?p=JpN1a0ML)"></div>
+  <div class="background" style="background-image:url(/assets/uploads/background4.jpg)"></div>
 </section>
-<!-- Slide 2 (#20) -->
-<section class="slide fade-6 kenBurns" data-name="slide-20-0439f293">
+    
 
+<section class="slide fade-6 kenBurns" data-name="slide-20-0439f293">
   <div class="content">
     <div class="container">
       <div class="wrap">
-      
-        <div class="fix-8-12">
-          <h1 class="margin-bottom-2 ae-1 oswald">Heart of the matter</h1>
-       <p class="italic small light ae-2 raleway">We took a national commercial germ-killing franchise company, Enviro-Master, <br />and evolved their brand to their next phase of life. </p>
-        <p class="larger light ae-2"><span class="opacity-8">We pride ourselves on knowing our clients more accurately than anyone outside of employees of the clients.  As such, we quickly learned that Enviro-Master's ambitious, passionate team was incredibly unique in their level of investment in this somewhat "unsexy" brand.  
-      </span>    </p>    <p class="larger light ae-2"><span class="opacity-8 raleway">
-         We sought to take that passion and apply it to their brand in order to breathe new life into their marketing strategy, personalize the marketing and sales collateral, and reach new audiences.  
-</span></p>
-          <a class="button btnbox ae-5 fromCenter oswald" href="#slide-32-847d36e1">Check It Out</a>
-        </div>
-      
+        {% block slidetwo %} {% endblock %}
       </div>
     </div>
   </div>
-  <div class="background" style="background-image:url(assets/uploads/background3.jpg?p=JpN1a0ML)"></div>
+  <div class="background" style="background-image:url(/assets/uploads/background3.jpg"></div>
 </section>
-<!-- White Slide 3 (#32) -->
+    
+
 <section class="slide fromLeft blackSlide" data-name="slide-32-847d36e1">
 		<a name="slide-32-847d36e1"></a>
 
   <div class="content">
     <div class="container">
       <div class="wrap">
-          
-        <div class="fix-12-12">
-          <ul class="flex reverse">
-            <li class="col-6-12 left cell-32">
-              <h1 class="oswald ae-2 smaller margin-bottom-2 ow2qle">Know thy audience and empower thou sales team.</h1>
-              <p class="ae-3 larger light margin-bottom-3 raleway"><span class="opacity-8">Our process involves a deep dive into your target market to understand their psychographic data.  Firmographic, demographic, you can get those from anywhere.  But psychographics enable you to truly understand how to sell your audience.</span></p>
-              <ul class="items-32">
-                <li class="fix-4-12 toLeft ae-4 margin-bottom-3">
-                  <h4 class="small margin-bottom-1 oswald">Sales Profiles</h4>
-                  <p class="opacity-8 raleway">For Enviro-Master, we did this in the form of sales profiles, as can be seen here.</p>
-                </li>
-                <li class="fix-4-12 toLeft ae-5 margin-bottom-3">
-                   <h4 class="small margin-bottom-1 oswald">Marketing Profiles</h4>
-                  <p class="opacity-8 raleway">Another form of our psychographic summarization acts as a litmus test for your marketing efforts.  You can <a href="marketingprofiles.html">learn more about marketing profiles here</a>.</p>
-                </li>
-              </ul>
-				          <a class="button btnbox ae-5 fromCenter oswald" href="#slide-32-68347b8e">Keep Going</a>
-
-            </li>
-            <li class="col-6-12 left ae-1 fromRight">
-              <img class="ipad-32 margin-bottom-tablet-4" data-action="zoom" width="1080" src="assets/uploads/enviro-master-sales-profiles-page-11.jpg?p=JpN1a0ML" alt="iPad Image"/>
-            </li>
-          </ul>
-        </div>
-        
+        {% block slidethree %} {% endblock %}
       </div>
     </div>
   </div>
-  
+  <div class="background" style="background-image:url(/assets/uploads/background2.jpg"></div>
 </section>
-<!-- Slide 4 (#32) -->
-		<a name="slide-32-68347b8e"></a>
+    
+
 
 <section class="slide fade-6 kenBurns fromLeft" data-name="slide-32-68347b8e">
+	<a name="slide-32-68347b8e"></a>
   <div class="content">
     <div class="container">
       <div class="wrap">
-          
-        <div class="fix-12-12">
-          <ul class="flex reverse">
-            <li class="col-6-12 left cell-32">
-              <h1 class="ae-2 smaller margin-bottom-2 oswald">Pulling It Together</h1>
-              <p class="ae-3 larger light margin-bottom-3"><span class="opacity-8 raleway">Once we understood our client and their target market, we ensure the positioning and competitive differentiation are front-and-center.<br /><br />Originally, the brand had shown discounts and bathroom pictures. All of that heart and passion they showed to us in meeting was lost in the branding and creative sets.  They wanted to convey the personal touch to each of their target verticals.  From all of this, we birthed the "Protect My ______" campaign and ethos, hyper-targeted to each vertical.</span></p>
-                        			  				          <a class="button btnbox ae-5 fromCenter oswald" href="#slide-90-d95b0eb4">Keep Going</a>
-
-            </li>
-            <li class="col-6-12 left ae-1 fromRight">
-              <img class="ipad-32 margin-bottom-tablet-4" data-action="zoom" width="1080" src="assets/uploads/protect-my-little-monsters.jpg?p=JpN1a0ML" alt="iPad Image"/>
-
-            </li>
-
-          </ul>
-
-        </div>
-        
-      </div>
+        {% block slidefour %} {% endblock %}
+          </div>
     </div>
   </div>
-  <div class="background" style="background-image:url(assets/uploads/background345004.jpg?p=JpN1a0ML)"></div>
+  <div class="background" style="background-image:url(/assets/uploads/background345004.jpg)"></div>
 </section>
-<!-- Slide 5 (#90) -->
-<section class="slide fade-6 kenBurns" data-name="slide-90-d95b0eb4">
-			<a name="slide-90-d95b0eb4"></a>
 
-  <div class="content">
-    <div class="container">
-      <div class="wrap">
 
-        <div class="fix-8-12 toCenter">
-       
-          <h1 class="smaller margin-bottom-2 ae-1 oswald">Bringing It Home</h1>
-          <p class="large light ae-2"><span class="opacity-8 raleway">We carried this concept through all verticals that were being targeted (six in total), as can be seen in these sales fliers:</span></p>
-        </div>
-        <div class="fix-12-12 margin-top-4">
-          <ul class="flex fixedSpaces later left">
-
-            <li class="col-3-12 col-tablet-1-2 col-phone-1-1">
-              <!--<div class="rounded button empty margin-bottom-2 noShadow popupTrigger ae-3" data-popup-id="90-5">-->
-
-              <img data-action="zoom" class="wide" src="assets/uploads/19-enviro-895-designflyersforpresentation-v5-copy-page-1.jpg?p=JpN1a0ML" alt="Video Thumbnail"/>
-              <h4 class="smaller margin-bottom-1 ae-4 oswald">Sit-down Restaurants</h4>
-             
-            </li>
-            <li class="col-3-12 col-tablet-1-2 col-phone-1-1">
-              <img data-action="zoom" class="wide" src="assets/uploads/19-enviro-895-designflyersforpresentation-v5-copy-page-4.jpg?p=JpN1a0ML" alt="Image Thumbnail"/>
-              <h4 class="smaller margin-bottom-1 ae-5 oswald">Day Care Facilities</h4>
-            </li>
-            <li class="col-3-12 col-tablet-1-2 col-phone-1-1">
-            <img  data-action="zoom" class="wide" src="assets/uploads/19-enviro-895-designflyersforpresentation-v5-copy-page-3.jpg?p=JpN1a0ML"/>
-              <h4 class="smaller margin-bottom-1 ae-6 oswald">Quick-serve restaurants</h4>
-          
-            </li>
-            <li class="col-3-12 col-tablet-1-2 col-phone-1-1">
-             <img  data-action="zoom" class="wide" src="assets/uploads/19-enviro-895-designflyersforpresentation-v5-copy-page-6.jpg?p=JpN1a0ML" alt="Image Thumbnail"/>
-              <h4 class="smaller margin-bottom-1 ae-7 oswald">Grocery Stores</h4>
-       
-            </li>
-          </ul>
-
-        </div>
-
-      </div>
-    </div>
-  </div>
-  <div class="background" style="background-image:url(assets/uploads/background345004.jpg?p=JpN1a0ML)"></div>
-</section>
-<!-- Slide 5 (#90) -->
 
 <section class="slide fade-6 kenBurns" data-name="slide-90-d95b0eb4">
 			<a name="slide-90-d95b0eb4"></a>
@@ -308,110 +272,59 @@
   <div class="content">
     <div class="container">
       <div class="wrap">
+              {% block slidefive %} {% endblock %}
 
-        <div class="fix-8-12 toCenter">
-       
-          <h1 class="smaller margin-bottom-2 ae-1 oswald">A Breath of Fresh Air</h1>
-          <p class="large light ae-2"><span class="opacity-8 raleway">These banner ads show how we carried the mesaging through to Enviro-Master's market in a hyper-targeted way:</span></p>
-        </div>
-        <div class="fix-12-12 margin-top-4">
-          <ul class="flex fixedSpaces later left">
-            <li class="col-4-12 col-tablet-1-2 col-phone-1-1">
-              <div class="rounded button empty margin-bottom-2 noShadow ae-3"><img data-action="zoom"  class="wide" src="assets/uploads/chicken-recipe.jpg?p=JpN1a0ML" alt="Video Thumbnail"/></div>
-              <h4 class="smaller margin-bottom-1 ae-4 oswald">Sit-down Restaurants</h4>
-             
-            </li>
-            <li class="col-4-12 col-tablet-1-2 col-phone-1-1">
-              <a data-action="zoom"  href="#" class="rounded button empty margin-bottom-2 ae-4"><img class="wide" src="assets/uploads/acr505456519168832091.jpg?p=JpN1a0ML" alt="Image Thumbnail"/></a>
-              <h4 class="smaller margin-bottom-1 ae-5 oswald">Grocery Stores</h4>
-            </li>
-            <li class="col-4-12 col-tablet-1- col-phone-1-1">
-              <a data-action="zoom"  href="#" class="rounded button empty margin-bottom-2 ae-5"><img class="wide" src="assets/uploads/protect-my-little-monsters907534.png"/></a>
-              <h4 class="smaller margin-bottom-1 ae-6 oswald">Day care facilities</h4>
-          
-            </li>
-        
-          </ul>
-
-        </div>
-
-      </div>
+          </div>
     </div>
   </div>
-  <div class="background" style="background-image:url(assets/uploads/background5.jpg?p=JpN1a0ML)"></div>
+  <div class="background" style="background-image:url(/assets/uploads/background345004.jpg?p=JpN1a0ML)"></div>
 </section>
-<!-- Slide 8 (#88) -->
+
+
+<section class="slide fade-6 kenBurns" data-name="slide-90-d95b0eb4">
+			<a name="slide-90-d95b0eb4"></a>
+
+  <div class="content">
+    <div class="container">
+      <div class="wrap">
+                    {% block slidesix %} {% endblock %}
+
+                </div>
+    </div>
+  </div>
+  <div class="background" style="background-image:url(/assets/uploads/background5.jpg?p=JpN1a0ML)"></div>
+</section>
 <section class="slide fade-6 kenBurns" data-name="slide-88-759b02e9">
 			<a name="slide-88-759b02e9"></a>
 
   <div class="content">
     <div class="container">
       <div class="wrap">
-
-        <div class="fix-8-12">
-          <h1 class="small margin-bottom-2 ae-1 oswald">We'd Love To Tame Your Business Monsters</h1>
-          
-        </div>
-
-        <div class="fix-12-12">
-          <ul class="flex later margin-top-6 left">
-            <li class="col-6-12 box-88">
-              <div class="quoteBubble ae-4 fromLeft">
-                <p class="larger light cropBottom opacity-8 raleway">You guys are amazing. I never expected to be able to get [this] done in time, let alone get it done this well. Thank you so much!</p>
-              </div>
-              <p class="margin-top-3 ae-6 fromRight raleway"><strong>Annie Rogers</strong> <span class="opacity-7">SVP, Marketing, Enviro-Master</span></p>
-            </li>
-            <li class="col-6-12">
-              <ul class="flex fromBottomRight fixedSpaces margin-top-2">
-                <li class="col-6-12 col-phablet-1-2 ae-6">
-                  <h4 class="smaller margin-bottom-1 oswald">Business &amp; Growth Strategy</h4>
-                  <p class="opacity-8 margin-bottom-3 raleway">The most comprehensive offering out there!</p>
-                </li>
-                <li class="col-6-12 col-phablet-1-2 ae-7">
-                  <h4 class="smaller margin-bottom-1 oswald">Creative</h4>
-                  <p class="opacity-8 margin-bottom-3 raleway">The killer copy and visuals you neeed to change the world.</p>
-                </li>
-                <li class="col-6-12 col-phablet-1-2 ae-8">
-                  <h4 class="smaller margin-bottom-1 oswald">Branding</h4>
-                  <p class="opacity-8 margin-bottom-3 raleway">Your businesses foundation deserves some love.</p>
-                </li>
-                <li class="col-6-12 col-phablet-1-2 ae-9">
-                  <h4 class="smaller margin-bottom-1 oswald">Digital Orchestration</h4>
-                  <p class="opacity-8 margin-bottom-3 raleway">Marketing and Sales  stacks, websites, etc. need to fall in line.</p>
-                </li>
-          <a class="button btnbox ae-5 fromCenter oswald" href="#slide-55-9c2fa5d3">Schedule A Call</a>
-
-              </ul>
-            </li>
-          </ul>
-        </div>
-
+                          {% block slideseven %} {% endblock %}
       </div>
     </div>
   </div>
-  <div class="background" style="background-image:url(assets/uploads/background149643.jpg?p=JpN1a0ML)"></div>
+  <div class="background" style="background-image:url(/assets/uploads/background149643.jpg?p=JpN1a0ML)"></div>
 </section>
-<!-- Slide 9 (#55) -->
 <section class="slide fade-6 kenBurns" data-name="slide-55-9c2fa5d3">
 			<a name="slide-55-9c2fa5d3"></a>
 
   <div class="content">
     <div class="container">
       <div class="wrap">
+                                {% block slideeight %} {% endblock %}
 
-        <h1 class="smaller margin-bottom-2 ae-1 owwald">Schedule a call</h1>
-    
-      <!-- Calendly inline widget begin -->
-<div class="calendly-inline-widget" data-url="https://calendly.com/oakwaveco/consultation-casestudy?hide_event_type_details=1&hide_gdpr_banner=1&background_color=121212&text_color=ffffff&primary_color=6c5ba7" style="min-width:320px;height:630px;"></div>
-<script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>
-<!-- Calendly inline widget end -->
-        </div>
-        
+            </div>
       </div>
     </div>
-  <div class="background" style="background-image:url(assets/uploads/background345004.jpg?p=JpN1a0ML)"></div>
+  <div class="background" style="background-image:url(/assets/uploads/background345004.jpg?p=JpN1a0ML)"></div>
 </section>
 
+
+           
+            {{ site.codeinjection_foot | safe if site.codeinjection_foot }}
+            {{ codeinjection_foot | safe if codeinjection_foot }}   
+  
 <!-- Loading Progress Bar -->
 <div class="progress-bar blue"></div>
 
@@ -419,7 +332,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <!-- Compressed Scripts -->
-    <script src="js/slides.min.js?52351" type="text/javascript"></script>
+    <script src="/assets/js/slides.min.js?52351" type="text/javascript"></script>
      
-</body>
+    </body>
 </html>

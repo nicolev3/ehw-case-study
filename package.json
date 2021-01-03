@@ -1,0 +1,22 @@
+{
+  "name": "casestudies",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/strategicallynicole/ehw.git",
+  "author": "Strategically Nicole <n@oakwave.cc>",
+  "license": "MIT",
+  "dependencies": {
+    "@11ty/eleventy": "^0.11.1",
+    "eleventy-plugin-lazyimages": "^2.1.0",
+    "eleventy-plugin-sass": "^1.1.1",
+    "html-minifier": "^4.0.0",
+    "node-sass": "^5.0.0",
+    "path": "^0.12.7",
+    "util": "^0.12.3"
+  },
+  "scripts": {
+    "start": "DEBUG=Eleventy* npx @11ty/eleventy --serve --watch",
+    "build": "ELEVENTY_PRODUCTION=true eleventy && NODE_ENV=production",
+    "r": "eleventy --serve"
+  }
+}
