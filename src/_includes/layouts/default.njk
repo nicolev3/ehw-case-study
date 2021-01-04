@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en">
     <head>
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
         <title>
             {%- if title -%}
                 {{ title }} – {{ site.title }}
@@ -80,7 +82,6 @@
     <link href="/assets/css/slides.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="https://use.typekit.net/zeb2lwt.css">
 
-          <link href="/assets/css/custom_d3RJ60BX.css?p=JpN1a0ML" rel="stylesheet" type="text/css"> 
 
         {% block givinghead %}
         {% endblock givinghead %}
@@ -161,54 +162,9 @@
 
   <symbol id="youtube" viewBox="0 0 24 24"><path d="M23.6 6.3c-.3-1.2-1.4-2.2-2.6-2.3-3-.3-6-.3-9-.3s-6 0-9 .3c-1.2.1-2.3 1.1-2.6 2.3-.4 1.8-.4 3.8-.4 5.7 0 1.9 0 3.9.4 5.7.3 1.2 1.4 2.2 2.6 2.3 3 .3 6 .3 9 .3s6 0 9-.3c1.3-.1 2.3-1.1 2.6-2.4.4-1.7.4-3.7.4-5.6 0-1.9 0-3.9-.4-5.7zm-14.1 9v-6.6l6.5 3.3-6.5 3.3z"></symbol>
 
-</svg><!-- Navigation -->
-<nav class="side ">
-  <div class="navigation default">
-    <ul></ul>
-  </div>
-</nav><!-- Panel Top #06 -->
-<nav class="panel top">
-  <div class="sections desktop">
-    <div class="left"><a href="https://www.oakwave.com" title="OAKwave"><img src="/assets/uploads/logo-lined-white-and-purpleat3x.png?p=JpN1a0ML" /></a></div>
-    <div class="center">
-      <ul class="menu">
-        <li><a href="https://www.oakwave.com">Main Site</a></li>
-        <li><a href="https://www.oakwave.com/blog">Blog</a></li>
-        <li><a href="https://www.oakwave.com/schedule">Schedule a Call</a></li>
-      </ul>
-    </div>
-    <div class="right"><span class="button actionButton sidebarTrigger" data-sidebar-id="1"><img src="/assets/uploads/logo-lined-white-and-purpleat3x.png?p=JpN1a0ML"></span></div>
-  </div>
-  <div class="hidden sections compact">
-    <div class="left"><a href="#" title="Slides Framework"><img class="logo" src="/assets/uploads/logo-lined-white-and-purpleat3x.png?p=JpN1a0ML"></a></div>
-    <div class="right"><span class="button actionButton sidebarTrigger" data-sidebar-id="1"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu"></use></svg></span></div>
-  </div>
-</nav>
+</svg>
 
-<!-- Sidebar -->
-<nav class="sidebar" data-sidebar-id="1">
-  <div class="close"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close"></use></svg></div>
-  <div class="content">
-    <div class="sidebar-logo"><a href="#" class=""><img src="/assets/uploads/logo-symbol-white-purple.png?p=JpN1a0ML"class="logo"></a></div>
-    <ul class="mainMenu margin-top-3">
-             <li><a href="https://www.oakwave.com">Main Site</a></li>
-        <li><a href="https://www.oakwave.com/blog">Blog</a></li>
-       <!-- <li><a href="https://www.oakwave.com/testimonials">More Case Studies</a></li>-->
-        <li><a href="https://www.oakwave.com/schedule">Schedule a Call</a></li>  
-        <li> Case Studies
-<ul class="subMenu small opacity-8">
-      <li><a href="Commercial Cleaning Franchise">Commercial Cleaning Franchise</a></li>
-      <li><a href="IT Service &amp; Consulting Firm">IT Service &amp; Consulting Firm</a></li>
-      <li><a href="Multi-Practicioner Medical Provider &amp; Franchising Model">Medical Plan Provider </a></li>
-
-    </ul>
-    <ul class="social opacity-8">
-      <li><a href="https://www.facebookc.com/oakwaveco"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#facebook"></use></svg></a></li>
-      <li><a href="https://www.twitter.com/oakwaveco"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#twitter"></use></svg></a></li>
-      <li><a href="https://www.linkedin.com/in/real-strategy"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#linkedin"></use></svg></a></li>
-    </ul>
-  </div>
-</nav>
+{% include "partials/nav.njk" %}
 
 
 
@@ -333,6 +289,16 @@
 
     <!-- Compressed Scripts -->
     <script src="/assets/js/slides.min.js?52351" type="text/javascript"></script>
-     
+     <script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
     </body>
 </html>

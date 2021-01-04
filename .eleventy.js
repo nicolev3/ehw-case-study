@@ -22,11 +22,13 @@ const pluginSass = require("eleventy-plugin-sass");
     cleanCSS: true,
     cleanCSSOptions: {},
     autoprefixer: true,
-    outputDir: './dist/assets/css',
+    outputDir: './dist/assets/css/',
     remap: true
     }; 
 
 module.exports = function(config) {
+      config.addPlugin(pluginSass, sassPluginOptions);
+
   config.addLayoutAlias('base', 'default.njk');
   // Inside the function you export...
 config.addFilter("toUTCString", (date) => {
@@ -56,7 +58,8 @@ config.addPlugin(lazyImages, {
   config.addPassthroughCopy('src/assets/library/');
   config.addPassthroughCopy('src/assets/js/');
   config.addPassthroughCopy('src/assets/css/');
-  config.addPassthroughCopy('src/assets/uploads');
+  config.addPassthroughCopy('src/assets/uploads/');
+  config.addPassthroughCopy('src/admin/config.yml');
 
   config.addPassthroughCopy('src/assets/svg/');
   //config.addPassthroughCopy('src/assets/styles/');

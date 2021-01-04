@@ -136,6 +136,10 @@ form input[type="email"].input-13 {
 		margin-top: -228px;
 		margin-bottom: -228px;
 	}
+	img.logo.ls-is-cached.lazyloaded {
+		width: 170px;
+		margin-top: 10px;
+	}
 }
 
 
@@ -143,6 +147,10 @@ form input[type="email"].input-13 {
 @include media($phablet, max) {
 	.cell-28 {
 		padding-bottom: 35px;
+	}
+	img.logo.ls-is-cached.lazyloaded {
+		width: 170px;
+		margin-top: 10px;
 	}
 }
 
@@ -153,11 +161,19 @@ form input[type="email"].input-13 {
 		margin-top: -228px;
 		margin-bottom: -228px;
 	}
+	img.logo.ls-is-cached.lazyloaded {
+		width: 170px;
+		margin-top: 10px;
+	}
 }
 
 @include media($phablet, max) {
 	.cell-29 {
 		padding-bottom: 35px;
+	}
+	img.logo.ls-is-cached.lazyloaded {
+		width: 170px;
+		margin-top: 10px;
 	}
 }
 
