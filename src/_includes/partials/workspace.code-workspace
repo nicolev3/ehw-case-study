@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "../../.."
+		},
+		{
+			"path": "../../../../startyourengines"
+		},
+		{
+			"path": "../../../../ems-case-study"
+		}
+	],
+	"settings": {}
+}
